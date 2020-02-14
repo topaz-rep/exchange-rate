@@ -50,6 +50,10 @@
   .money-img {
     width: 150px;
   }
+  
+  .b-text {
+      color: red;
+  }
 
   .flags {
       width: 20px;
