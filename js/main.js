@@ -28,7 +28,7 @@ async function getCBRate () {
         let out = "";
         for (let i = 0; i < cbStat.length; i++)
             if(cbStat[i].cc === 'EUR' || cbStat[i].cc === 'USD' || cbStat[i].cc === 'RUB' || cbStat[i].cc === 'PLN') 
-                out += '1 ' + cbStat[i].cc + ' - ' + parseFloat(cbStat[i].rate).toFixed(2) + ' грн ;<br>';
+                out += '<img src="../img/flags/' + cbStat[i].cc.slice(0, 2) + '.png" alt="' + cbStat[i].cc.slice(0, 2) + '-flag" class="flags" /> 1 ' + cbStat[i].cc + ' - ' + parseFloat(cbStat[i].rate).toFixed(2) + ' грн ;<br>';
             document.getElementById("fromCentBank").innerHTML = out;
     }
 }
@@ -41,8 +41,7 @@ async function getPrivatRate () {
         let prStat = await responce.json();
         let out = "";
         for (let i = 0; i < prStat.length; i++)
-            // if(prStat[i].cc === 'EUR' || prStat[i].cc === 'USD' || cbStat[i].cc === 'RUB' || cbStat[i].cc === 'PLN') 
-                out += '1 ' + prStat[i].ccy + ' - ' + parseFloat(prStat[i].sale).toFixed(2) + ' грн ;<br>';
+                out += '<img src="../img/flags/' + prStat[i].ccy.slice(0, 2) + '.png" alt="' + prStat[i].ccy.slice(0, 2) + '-flag" class="flags" /> 1 ' + prStat[i].ccy + ' - ' + parseFloat(prStat[i].sale).toFixed(2) + ' грн ;<br>';
             document.getElementById("fromPrivatBank").innerHTML = out;
     }
 }

@@ -50,6 +50,10 @@
   .money-img {
     width: 150px;
   }
+
+  .flags {
+      width: 20px;
+  }
   
   .currency {
     padding-bottom: 20px;
