@@ -42,7 +42,7 @@ async function getPrivatRate () {
         let out = "";
         for (let i = 0; i < prStat.length; i++) {
                 // if () prStat[i].ccy = ''
-                out += '<img src="../img/flags/' + prStat[i].ccy.slice(0, 2).toLowerCase() + '.png" alt="' + prStat[i].ccy.slice(0, 2) + '-flag" class="flags" /> 1 ' + prStat[i].ccy + ' - ' + parseFloat(prStat[i].sale).toFixed(2) + ' грн ;<br>';
+                out += '<img src="../img/flags/' + prStat[i].ccy.slice(0, 2) + '.png" alt="' + prStat[i].ccy.slice(0, 2) + '-flag" class="flags" /> 1 ' + prStat[i].ccy + ' - ' + parseFloat(prStat[i].sale).toFixed(2) + ' грн ;<br>';
             document.getElementById("fromPrivatBank").innerHTML = out;
         }
     }
